@@ -1,8 +1,10 @@
-package com.github.doctrey.telegram.telegram;
+package com.github.doctrey.telegram;
 
 import com.github.doctrey.telegram.client.PhoneNumberService;
 import com.github.doctrey.telegram.client.impl.AppRyanPhoneNumberService;
 import com.github.doctrey.telegram.dao.PhoneNumberDao;
+import com.github.doctrey.telegram.telegram.ApiStorage;
+import com.github.doctrey.telegram.telegram.DefaultApiCallback;
 import com.github.doctrey.telegram.telegram.api.ApiConstants;
 import com.github.doctrey.telegram.telegram.utils.RpcUtils;
 import org.telegram.api.TLConfig;

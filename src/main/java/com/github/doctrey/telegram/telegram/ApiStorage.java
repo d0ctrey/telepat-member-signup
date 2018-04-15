@@ -145,7 +145,7 @@ public class ApiStorage extends TLPersistence<TLStorage> implements AbsApiState 
             }
 
             // TODO: 4/13/18 add this so only ipv4 addresses get added
-            if(!option.isIPV6())
+            if(!option.isIPV6() || (option.isIPV6() && Boolean.valueOf(System.getenv("TL_ALLOW_IPV6"))))
                 getObj().getDcInfos().add(new TLDcInfo(option.getId(), option.getIpAddress(), option.getPort(), nextVersion));
         }
         write(STORAGE_FILE_NAME);
